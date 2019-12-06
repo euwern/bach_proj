@@ -12,7 +12,7 @@ import math
 import networks
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--max_epochs', type=int, default=20)
+parser.add_argument('--max_epochs', type=int, default=300)
 parser.add_argument('--dataset', choices=['bach'], default='bach', help='dataset')
 parser.add_argument('--seed', type=int, default=1111)
 parser.add_argument('--model', choices=['finetune'], default='finetune')
@@ -25,7 +25,7 @@ parser.add_argument('--save_epoch', type=int, default=25)
 parser.add_argument('--tqdm_off', action='store_true', default=False)
 parser.add_argument('--source_dir', default='', type=str)
 parser.add_argument('--target_dir', default='', type=str)
-parser.add_argument('--lr_steps', default=[100], nargs='+', type=int)
+parser.add_argument('--lr_steps', default=[100, 200], nargs='+', type=int)
 
 args = parser.parse_args()
 
